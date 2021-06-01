@@ -4,9 +4,12 @@ import me.travis.wurstplusthree.WurstplusThree;
 import me.travis.wurstplusthree.hack.Hack;
 import me.travis.wurstplusthree.setting.type.BooleanSetting;
 import me.travis.wurstplusthree.setting.type.ColourSetting;
+import me.travis.wurstplusthree.setting.type.EnumSetting;
 import me.travis.wurstplusthree.setting.type.IntSetting;
 import me.travis.wurstplusthree.util.elements.Colour;
 import org.lwjgl.input.Keyboard;
+
+import java.util.Arrays;
 
 /**
  * @author Madmegsox1
@@ -25,8 +28,13 @@ public class Gui extends Hack {
     public IntSetting rainbowDelay = new IntSetting("RainbowDelay", 100, 0, 5000, this);
     public IntSetting scrollSpeed = new IntSetting("ScrollSpeed", 15, 1, 100, this);
     public BooleanSetting blur = new BooleanSetting("Blur", true, this);
+    public BooleanSetting gradient = new BooleanSetting("Gradient", false, this);
+    public ColourSetting gradientStartColor = new ColourSetting("GradientStartColor", new Colour(255, 122, 5, 100), this);
+    public ColourSetting gradientEndColor = new ColourSetting("GradientEndColor", new Colour(255, 122, 5, 100), this);
     public BooleanSetting animation = new BooleanSetting("Animation", true, this);
     public IntSetting animationStages = new IntSetting("AnimationStages", 250, 1, 1000, this);
+    public EnumSetting arrowType = new EnumSetting("ArrowType", "Off", Arrays.asList("Off", "Type1", "Type2"), this);
+    public IntSetting mouseDelay = new IntSetting("MouseDelay", 250, 100, 300, this);
 
     public Gui(){
         INSTANCE = this;
