@@ -84,7 +84,7 @@ public class AutoEz extends Hack {
     private void announceDeath() {
         if (this.delayCount < 150) return;
         delayCount = 0;
-        mc.player.connection.sendPacket(new CPacketChatMessage("you just got nae nae'd by wurst+3" + (discord.getValue() ? " | discord.gg/wurst" : "")));
+        mc.player.connection.sendPacket(new CPacketChatMessage("you just got nae nae'd by wurst+3" + (discord.getValue() ? " | discord.gg/FXp8p7PY48" : "")));
     }
 
 }
